@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-light: #f8fafc;
+  --sidebar-width: 450px;
+  --primary: #4f46e5;
+  --border: #e2e8f0;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: #1e293b;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Navbar Refinada */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border);
+  height: 65px;
+  padding: 0 1.5rem;
+}
+
+.main-wrapper {
+  display: flex;
+  height: calc(100vh - 65px);
+}
+
+/* Painel de Input (Esquerda) */
+.config-panel {
+  width: var(--sidebar-width);
+  background: #ffffff;
+  border-right: 1px solid var(--border);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Painel de Preview (Direita) */
+.preview-panel {
+  max-width: 80%;
+  flex: 1;
+  padding: 2.5rem;
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-preview {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Inputs Modernos */
+.form-label {
+  font-weight: 600;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+}
+
+.input-modern {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  transition: all 0.2s;
+  background: #fcfcfd;
+}
+.input-modern:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  outline: none;
+  background: #fff;
+}
+
+textarea.input-modern {
+  min-height: 250px;
+  resize: none;
+}
+
+/* Botão Minimalista */
+.btn-generate {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: opacity 0.2s;
+}
+.btn-generate:hover {
+  opacity: 0.9;
+  color: white;
+}
+.btn-generate:disabled {
+  background: #94a3b8;
+}
+
+/* Terminal Code Style (Clean) */
+.code-container {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 2rem;
+  margin: 0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  line-height: 1.7;
+}
+
+/* Loader */
+.loader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
