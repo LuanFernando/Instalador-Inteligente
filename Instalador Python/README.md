@@ -84,3 +84,13 @@ Logs de erro
 Informações da execução
 
 Sem essa configuração, o monitoramento não funcionará corretamente.
+
+## GERAR EXECUTAVEL
+
+NOTE: Instalar o: python -m pip install pyinstaller
+
+pyinstaller --noconsole --onefile --add-data ".env;." --add-data "MD;MD" main.py
+
+ou
+
+python -m PyInstaller --noconsole --onefile --add-data ".env;." --add-data "MD;MD" main.py
