@@ -34,7 +34,7 @@ def download_arquivo(url, destino):
         
     print(f"--- Iniciando Download do SQL Server (.zip) ---")
     try:
-        response = requests.get(url, stream=True, timeout=30)
+        response = requests.get(url, stream=True, timeout=900)
         total_size = int(response.headers.get('content-length', 0))
         
         if response.status_code != 200:
